@@ -1,0 +1,2 @@
+?package(local.simlife):needs="X11" section="Apps/Graphics" \
+	title="SimLife" command="/usr/lib/simlife/simlife"

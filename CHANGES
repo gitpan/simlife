@@ -1,0 +1,13 @@
+SimLife
+
+1999/03/28  Started. 
+
+1999/04/08  Basic functionality with one set of rules, life.spr, for
+            Conway's life incorporated. 
+
+1999/04/21  Added MesgBox.pm to .tar.gz.
+
+1999/08/07  Minor fixes. Changed the options file under Linux to 
+            .simliferc from .simlife-opts.
+
+1999/08/08  Changeed licence to GPL.
