@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 
-# $Id: simlife-canvas-cmd.pl,v 1.1 1999/08/08 15:48:48 root Exp root $
+# $Id: simlife-canvas-cmd.pl,v 1.2 1999/08/28 22:12:46 root Exp $
 
 # Copyright (c) Mark Summerfield 1999. All Rights Reserved.
 # May be used/distributed under the GPL.
@@ -104,9 +104,9 @@ sub read_pixel {
 
     my( $x, $y ) = @_ ;
 
-    ( 0 <= $x and $x < $Opt{WIDTH} and
-      0 <= $y and $y < $Opt{HEIGHT} and 
-  	  defined $OldPixel[$x][$y] ) ? 
+    ( defined $OldPixel[$x][$y]    and
+      0 <= $x and $x < $Opt{WIDTH} and
+      0 <= $y and $y < $Opt{HEIGHT} ) ?
 	$OldPixel[$x][$y] : $Const{DEAD_COLOUR} ;
 }
 

@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 
-# $Id: simlife-simulation-cmd.pl,v 1.1 1999/08/08 15:48:48 root Exp root $
+# $Id: simlife-simulation-cmd.pl,v 1.1 1999/08/08 15:48:48 root Exp $
 
 # (c) Mark Summerfield 1999. All Rights Reserved.
 # May be used/distributed under the GPL.

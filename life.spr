@@ -98,17 +98,19 @@ sub step {
 
     # Work out next generation in memory
 	for( my $x = 0 ; $x < $Opt{WIDTH} ; $x++ ) {
+        my $xm = $x - 1 ;
+        my $xp = $x + 1 ;
 		for( my $y = 0 ; $y < $Opt{HEIGHT} ; $y++ ) {
 			# Count the neighbours
 			$n = 0 ;
-			$n++ if &canvas::read_pixel( $x - 1, $y - 1 ) ne $Const{DEAD_COLOUR} ;
-			$n++ if &canvas::read_pixel( $x - 1, $y     ) ne $Const{DEAD_COLOUR} ;
-			$n++ if &canvas::read_pixel( $x - 1, $y + 1 ) ne $Const{DEAD_COLOUR} ;
-			$n++ if &canvas::read_pixel( $x,     $y - 1 ) ne $Const{DEAD_COLOUR} ;
-			$n++ if &canvas::read_pixel( $x,     $y + 1 ) ne $Const{DEAD_COLOUR} ;
-			$n++ if &canvas::read_pixel( $x + 1, $y - 1 ) ne $Const{DEAD_COLOUR} ;
-			$n++ if &canvas::read_pixel( $x + 1, $y     ) ne $Const{DEAD_COLOUR} ;
-			$n++ if &canvas::read_pixel( $x + 1, $y + 1 ) ne $Const{DEAD_COLOUR} ;
+			$n++ if &canvas::read_pixel( $xm, $y - 1 ) ne $Const{DEAD_COLOUR} ;
+			$n++ if &canvas::read_pixel( $xm, $y     ) ne $Const{DEAD_COLOUR} ;
+			$n++ if &canvas::read_pixel( $xm, $y + 1 ) ne $Const{DEAD_COLOUR} ;
+			$n++ if &canvas::read_pixel( $x,  $y - 1 ) ne $Const{DEAD_COLOUR} ;
+			$n++ if &canvas::read_pixel( $x,  $y + 1 ) ne $Const{DEAD_COLOUR} ;
+			$n++ if &canvas::read_pixel( $xp, $y - 1 ) ne $Const{DEAD_COLOUR} ;
+			$n++ if &canvas::read_pixel( $xp, $y     ) ne $Const{DEAD_COLOUR} ;
+			$n++ if &canvas::read_pixel( $xp, $y + 1 ) ne $Const{DEAD_COLOUR} ;
 
             $old_colour = &canvas::read_pixel( $x, $y )  ;
 			$new_colour = $Const{DEAD_COLOUR} ;
