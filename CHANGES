@@ -13,3 +13,8 @@ SimLife
 1999/08/08  Changed licence to GPL.
 
 1999/08/28  Minor fixes.
+
+1999/09/06  Removed MesgBox.pm at Lupe Christoph's (CPAN) request. You must
+            pick this module up separately now (although old versions will
+            work fine if you've already got one).
+
